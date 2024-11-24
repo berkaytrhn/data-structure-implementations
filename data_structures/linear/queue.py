@@ -26,7 +26,8 @@ class Queue:
             print("Can not dequeue from empty Queue")
             return None
         else:
-            value = self.front.value
+            # return the value itself
+            value = self.front
             self.front = self.front.next
 
             # front become None after dequeue, that was only node; so queue becomes empty
