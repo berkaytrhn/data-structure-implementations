@@ -34,4 +34,6 @@ class Queue:
                 self.rear=None
 
             return value
-    
+    def empty(self) -> bool:
+        return self.rear is None and self.front is None
+            
