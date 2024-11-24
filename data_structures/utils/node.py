@@ -16,7 +16,7 @@ class NonLinearNode:
 
     def __repr__(self):
         """Representation method"""
-        return f"Node({self.value}), Neighbours: {', '.join(self.neighbours)}"
+        return f"Node({self.value}), Neighbours: {', '.join(str(neighbour.value) for neighbour in self.neighbours)}"
     
 class LinearNode:
     """
