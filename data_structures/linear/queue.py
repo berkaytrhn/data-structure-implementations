@@ -13,17 +13,16 @@ class Queue:
     def enqueue(self, value: Any) -> None:
         """ Classical enqueue function for queue implementation"""
         node: LinearNode = LinearNode(value)
-        if self.rear is None:
-            self.front=node
-            self.front.next=node
-            self.rear=node
+        if self.isEmpty():
+            self.front = self.rear = node
         else:
             self.rear.next = node # linking the new node
             self.rear=node # update rear node
 
     def dequeue(self) -> Any:
         """ Classical dequeue function for queue implementation"""
-        if self.front is None:
+        
+        if self.isEmpty():
             print("Can not dequeue from empty Queue")
             return None
         else:
@@ -37,7 +36,7 @@ class Queue:
 
             return value
 
-    def empty(self) -> bool:
+    def isEmpty(self) -> bool:
         """Check whether its empty or not"""
         return self.rear is None and self.front is None
             
