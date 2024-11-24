@@ -15,6 +15,7 @@ class Queue:
         node: LinearNode = LinearNode(value)
         if self.rear is None:
             self.front=node
+            self.front.next=node
             self.rear=node
         else:
             self.rear.next = node # linking the new node
