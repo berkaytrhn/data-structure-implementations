@@ -28,4 +28,4 @@ class Graph:
     
     def display(self):
         for node in self.nodes.values():
-            print(f"Node: {node.value}; Neighbours: {node.neighbours.__repr__()}")
+            print(f"Graph Node: {node.value}; Neighbours: {node.neighbours.__repr__()}")
