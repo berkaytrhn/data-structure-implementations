@@ -34,6 +34,8 @@ class Queue:
                 self.rear=None
 
             return value
+
     def empty(self) -> bool:
+        """Check whether its empty or not"""
         return self.rear is None and self.front is None
             
