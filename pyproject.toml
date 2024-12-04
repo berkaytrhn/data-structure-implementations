@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=60", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data_structure_implementations"
+version = "0.0.4"
+description = "Implementations of Popular Data Structures"
+readme = "README.md"
+authors = [
+  { name = "berkaytrhn", email = "berkaytrhn@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["data structures", "implementations", "algorithms"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+requires-python = ">=3.11.8"
+dependencies = []
+
+
+
+[project.urls]
+"Source" = "https://github.com/berkaytrhn/data-structure-implementations"
+
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
