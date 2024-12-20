@@ -30,4 +30,6 @@ class LinearNode:
 
     def __repr__(self):
         """Representation method"""
-        return f"Node: '{self.value}', Next: '{self.next}', Prev: '{self.prev}'"
+        _next = self.next.value if self.next else "N/A"
+        _prev = self.prev.value if self.prev else "N/A"
+        return f"Node: '{self.value}', Next: '{_next}', Prev: '{_prev}'"
