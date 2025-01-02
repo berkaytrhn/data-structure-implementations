@@ -23,6 +23,8 @@ class SinglyLinkedList:
             self.head = node
             self.tail = node
         
+        self.size+=1
+        
     
     def add_last(self, data: Any) -> None:
         """
@@ -35,6 +37,8 @@ class SinglyLinkedList:
         else:
             self.head = node
             self.tail = node
+            
+        self.size+=1
 
     def peek(self, index:int) -> LinearNode:
         """
@@ -72,6 +76,8 @@ class SinglyLinkedList:
         current.next=None
         self.tail=current
         
+        self.size-=1
+        
         return _node
 
     def clear(self) -> None:
@@ -80,6 +86,7 @@ class SinglyLinkedList:
         """
         self.head=None
         self.tail=None
+        self.size=0
     
     def contains(self, data: Any) -> bool:
         """
@@ -116,15 +123,9 @@ class SinglyLinkedList:
     def size(self) -> int:
         """
         Return number of nodes in list
-        TODO: can be cached as class field for performance
         """
-        counter = 0
-        current = self.head
-        while current:
-            counter+=1
-            current = current.next
+        return self.size
     
-        return counter
     
     def display(self) -> None:
         """
